@@ -1,5 +1,7 @@
 import * as React from "react"
 
+console.log("hello");
+
 // styles
 const pageStyles = {
   color: "#232129",
