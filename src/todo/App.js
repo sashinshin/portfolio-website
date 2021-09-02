@@ -5,9 +5,12 @@ import InputForm from './js/InputForm';
 import Main from './js/Main';
 
 const App = () => {
-  const [tasks, updateState] = useState(() => (localStorage.getItem('tasks')
+  
+  const [tasks, updateState] = useState(() => (
+    window.localStorage && localStorage.getItem('tasks')
     ? JSON.parse(localStorage.getItem('tasks'))
-    : []));
+    : [])
+    );
 
   const [inputWarning, updateInputWarning] = useState(false);
 

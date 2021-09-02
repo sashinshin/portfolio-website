@@ -5,7 +5,12 @@ import './todo.css';
 
 const TodoPage = () => {
     return (
+        <>
+        <head>
+            <title>Todo list</title>
+        </head>
         <App />
+        </>
     )
 }
 
