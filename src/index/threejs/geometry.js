@@ -1,18 +1,15 @@
 import * as THREE from 'three';
-// import moonImage from '../images/moon.jpg';
-// import normalImage from '../images/normal.jpg';
-
-let torus, addStar, moon;
-
+// import moonImage from '../../static/moon.jpg';
+// import normalImage from '../../static/normal.jpg';
 
 // Create torus
 const torusGeometry = new THREE.TorusGeometry(10, 3, 16, 100);
 //const material = new THREE.MeshBasicMaterial( {color: 0xFF6347, wireframe: true});
 const torusMaterial = new THREE.MeshPhongMaterial( {color: 0xFF6347});
-torus = new THREE.Mesh(torusGeometry, torusMaterial);
+const torus = new THREE.Mesh(torusGeometry, torusMaterial);
 
 // Random stars
-addStar = (scene) => {
+const addStar = (scene) => {
     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
     const material = new THREE.MeshBasicMaterial({color: 0xffffff});
     const star = new THREE.Mesh(geometry, material);
@@ -26,7 +23,7 @@ addStar = (scene) => {
 const moonTexture = new THREE.TextureLoader().load();
 const normalTexture = new THREE.TextureLoader().load();
 
-moon = new THREE.Mesh(
+const moon = new THREE.Mesh(
 new THREE.SphereGeometry(3, 32, 32),
 new THREE.MeshStandardMaterial({
     map: moonTexture,
