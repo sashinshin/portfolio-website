@@ -20,15 +20,17 @@ const addStar = (scene) => {
     scene.add(star);
     }
 
-const moonTexture = new THREE.TextureLoader().load();
-const normalTexture = new THREE.TextureLoader().load();
+// const moonTexture = new THREE.TextureLoader().load();
+// const normalTexture = new THREE.TextureLoader().load();
 
 const moon = new THREE.Mesh(
 new THREE.SphereGeometry(3, 32, 32),
-new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture,
-    })
+// new THREE.MeshStandardMaterial({
+//     map: moonTexture,
+//     normalMap: normalTexture,
+//     })
+// );
+new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true})
 );
 
 export { torus, addStar, moon };
