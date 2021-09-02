@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './js/Header';
 import InputForm from './js/InputForm';
 import Main from './js/Main';
 
 const App = () => {
-  
-  const [tasks, updateState] = useState(() => (
-    window.localStorage && localStorage.getItem('tasks')
-    ? JSON.parse(localStorage.getItem('tasks'))
-    : [])
-    );
+
+  // const [tasks, updateState] = useState(() => (
+  //   localStorage.getItem('tasks')
+  //   ? JSON.parse(localStorage.getItem('tasks'))
+  //   : []));
+  const [tasks, updateState] = useState([]);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      if (localStorage.getItem('tasks')) {
+        updateState(JSON.parse(localStorage.getItem('tasks')));
+      }
+    }
+  }, [])
 
   const [inputWarning, updateInputWarning] = useState(false);
 
@@ -68,6 +76,7 @@ const App = () => {
         : 'No tasks to show'}
     </div>
   );
+
 };
 
 export default App;
