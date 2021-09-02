@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import moonImage from '../images/moon.jpg';
-import normalImage from '../images/normal.jpg';
+// import moonImage from '../images/moon.jpg';
+// import normalImage from '../images/normal.jpg';
 
 let torus, addStar, moon;
 
@@ -23,8 +23,8 @@ addStar = (scene) => {
     scene.add(star);
     }
 
-const moonTexture = new THREE.TextureLoader().load(moonImage);
-const normalTexture = new THREE.TextureLoader().load(normalImage);
+const moonTexture = new THREE.TextureLoader().load();
+const normalTexture = new THREE.TextureLoader().load();
 
 moon = new THREE.Mesh(
 new THREE.SphereGeometry(3, 32, 32),

@@ -8,10 +8,4 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
   ],
-  module: {
-    rules: {
-      test: /\.(png|svg|jpg|jpeg|gif)$/i,
-      type: 'asset/resource',
-    }
-  }
 };

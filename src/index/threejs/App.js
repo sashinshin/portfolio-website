@@ -50,7 +50,7 @@ const App = () => {
       scene.add(lightHelper, gridHelper);
 
       // Orbit control
-      const controls = new OrbitControls(camera, renderer.domElement);
+      //const controls = new OrbitControls(camera, renderer.domElement);
 
       // Window resize
       window.addEventListener('resize', () => {
@@ -86,7 +86,7 @@ const App = () => {
         torus.rotation.y += 0.005;
         torus.rotation.z += 0.01;
 
-        controls.update();
+        //controls.update();
 
         moon.rotation.x += 0.005;
 

@@ -43,7 +43,6 @@ const Main = () => {
 				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 				   <li>Aliquam tincidunt mauris eu risus.</li>
 				</ul>
-
         </main>
         </>
     )
