@@ -13,11 +13,11 @@ const App = () => {
   const [tasks, updateState] = useState([]);
 
   useEffect(() => {
-    if (typeof window !== undefined) {
+    //if (typeof window !== 'undefined') {
       if (localStorage.getItem('tasks')) {
         updateState(JSON.parse(localStorage.getItem('tasks')));
       }
-    }
+    //}
   }, [])
 
   const [inputWarning, updateInputWarning] = useState(false);
