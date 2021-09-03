@@ -26,13 +26,13 @@ const addStar = (scene) => {
 
 let moon, cube, cube2, cube3;
 
-if (typeof document !== undefined) {
-
-    // The texture loader invokes the document, need workaround.
-    // const moonTexture = new THREE.TextureLoader().load(moonImage);
-    // const normalTexture = new THREE.TextureLoader().load(normalImage);
+if (typeof window !== undefined && typeof document !== undefined) {
 
     let moonTexture, normalTexture;
+    // The texture loader invokes the document, need workaround.
+    moonTexture = new THREE.TextureLoader().load(moonImage);
+    // const normalTexture = new THREE.TextureLoader().load(normalImage);
+
 
     moon = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
