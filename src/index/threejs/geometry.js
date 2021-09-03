@@ -29,13 +29,14 @@ const addStar = (scene) => {
 let moon, cube, cube2, cube3;
 
 console.log('before condition');
-console.log(window);
-console.log(document);
+console.log(typeof abb);
+console.log(typeof window);
+console.log(typeof document);
 
 if (typeof window !== undefined && typeof document !== undefined) {
     console.log('in condition');
-    console.log(window);
-    console.log(document);
+    console.log(typeof window);
+    console.log(typeof document);
 
     let moonTexture, normalTexture;
     // The texture loader invokes the document, need workaround.
