@@ -24,39 +24,44 @@ const addStar = (scene) => {
     scene.add(star);
     }
 
-// The texture loader invokes the document, need workaround.
-const moonTexture = new THREE.TextureLoader().load(moonImage);
-const normalTexture = new THREE.TextureLoader().load(normalImage);
+let moon, cube, cube2, cube3;
 
-const moon = new THREE.Mesh(
-new THREE.SphereGeometry(3, 32, 32),
-new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture,
-    })
-);
-// new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true})
-// );
+if (typeof document !== undefined) {
 
-// Cube
-const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const meTexture = new THREE.TextureLoader().load(me);
-const cubeMaterial = new THREE.MeshStandardMaterial({
-    map: meTexture,
-});
+    // The texture loader invokes the document, need workaround.
+    const moonTexture = new THREE.TextureLoader().load(moonImage);
+    const normalTexture = new THREE.TextureLoader().load(normalImage);
 
-const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+    moon = new THREE.Mesh(
+    new THREE.SphereGeometry(3, 32, 32),
+    new THREE.MeshStandardMaterial({
+        map: moonTexture,
+        normalMap: normalTexture,
+        })
+    );
+    // new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true})
+    // );
 
-const sethTexture = new THREE.TextureLoader().load(seth);
-const cubeMaterial2 = new THREE.MeshStandardMaterial({
-    map: sethTexture,
-});
-const cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial2);
+    // Cube
+    const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
+    const meTexture = new THREE.TextureLoader().load(me);
+    const cubeMaterial = new THREE.MeshStandardMaterial({
+        map: meTexture,
+    });
 
-const dreamStreaTexture = new THREE.TextureLoader().load(dreamStream);
-const cubeMaterial3 = new THREE.MeshStandardMaterial({
-    map: dreamStreaTexture,
-});
-const cube3 = new THREE.Mesh(cubeGeometry, cubeMaterial3);
+    cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+    const sethTexture = new THREE.TextureLoader().load(seth);
+    const cubeMaterial2 = new THREE.MeshStandardMaterial({
+        map: sethTexture,
+    });
+    cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial2);
+
+    const dreamStreaTexture = new THREE.TextureLoader().load(dreamStream);
+    const cubeMaterial3 = new THREE.MeshStandardMaterial({
+        map: dreamStreaTexture,
+    });
+    cube3 = new THREE.Mesh(cubeGeometry, cubeMaterial3);
+}
 
 export { torus, moon, cube, cube2, cube3, addStar };
