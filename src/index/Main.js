@@ -3,10 +3,6 @@ import './main.css';
 import App from './threejs/App';
 
 const Main = () => {
-
-    const list = Array(1).fill('Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
-    console.log(list);
-
     return (
         <>
         <title>

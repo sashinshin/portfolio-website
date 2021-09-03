@@ -5,6 +5,8 @@ import me from '../images/IMG_4966.jpg';
 import seth from '../images/IMG_8007.jpg';
 import dreamStream from '../images/dream-stream.png';
 
+console.log('inside gemoetry.js');
+
 // Create torus
 const torusGeometry = new THREE.TorusGeometry(10, 3, 16, 100);
 //const material = new THREE.MeshBasicMaterial( {color: 0xFF6347, wireframe: true});
@@ -26,10 +28,18 @@ const addStar = (scene) => {
 
 let moon, cube, cube2, cube3;
 
+console.log('before condition');
+console.log(window);
+console.log(document);
+
 if (typeof window !== undefined && typeof document !== undefined) {
+    console.log('in condition');
+    console.log(window);
+    console.log(document);
 
     let moonTexture, normalTexture;
     // The texture loader invokes the document, need workaround.
+    // Simple conditional doesn't seem to work
     moonTexture = new THREE.TextureLoader().load(moonImage);
     // const normalTexture = new THREE.TextureLoader().load(normalImage);
 
