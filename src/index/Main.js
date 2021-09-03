@@ -4,45 +4,68 @@ import App from './threejs/App';
 
 const Main = () => {
 
-    const list = Array(100).fill('Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+    const list = Array(1).fill('Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
     console.log(list);
 
     return (
         <>
         <title>
-                Portfolio
+            Sasha Luhr
         </title>
         <App />
-          <main>
+        <main>
 
-          <header>
-            <h1>Sashas portfolio</h1>
-            <ul>
-              <li><a href="todo" target="_blank">Todo App</a></li>
-            </ul>
-            <p>More coming soon...</p>
-          </header>
+            <header>
+                <h1>Sasha Luhr</h1>
+            </header>
 
-          <h1>HTML Ipsum Presents</h1>
+            <h1 className="title">About</h1>
 
-				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
-         <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. 
-          in turpis pulvinar facilisis. Ut felis.</p>
+            <article class="left">
+                <h2> Who am I?</h2>
 
-				<h2>Header Level 2</h2>
+                <h3>Start</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                <h3>Mid</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                <h3>End</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
 
-				<ul>
-				   {list.map((a)=> <li>{a}</li>)}
-				</ul>
+            </article>
 
-				<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+            <h1 className="title">Projects</h1>
 
-				<h3>Header Level 3</h3>
+            <article>
+                <h3><a href="https://dream-stream.netlify.app/" target="_blank">DreamStream</a></h3>
+                <p>
+                    DreamStream is an image sharing social media website created by me, Max Anderberg, Amund Ring and Konstantinos Dimtrakopoulus. It has all the features you would want including making posts, liking them, commenting and more!
+                    The app was created using GatsbyJS and the JAM stack.
+                </p>
+            </article>
 
-				<ul>
-				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-				   <li>Aliquam tincidunt mauris eu risus.</li>
-				</ul>
+            <article className="light left">
+                <h3><a href="todo" target="_blank">Todo list</a></h3>
+                <p>
+                    A todo list created in ReactJS. 
+                </p>
+            </article>
+
+            <article className="light">
+                <h3><a href="https://github.com/sashinshin/workout-app" target="_blank">Workout tracker</a></h3>
+                <p>
+                    Workout tracker.
+                </p>
+            </article>
+
+            <h1 className="title">Contact me</h1>
+
+
         </main>
         </>
     )
