@@ -29,8 +29,10 @@ let moon, cube, cube2, cube3;
 if (typeof document !== undefined) {
 
     // The texture loader invokes the document, need workaround.
-    const moonTexture = new THREE.TextureLoader().load(moonImage);
-    const normalTexture = new THREE.TextureLoader().load(normalImage);
+    // const moonTexture = new THREE.TextureLoader().load(moonImage);
+    // const normalTexture = new THREE.TextureLoader().load(normalImage);
+
+    let moonTexture, normalTexture;
 
     moon = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
@@ -44,24 +46,30 @@ if (typeof document !== undefined) {
 
     // Cube
     const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-    const meTexture = new THREE.TextureLoader().load(me);
-    const cubeMaterial = new THREE.MeshStandardMaterial({
-        map: meTexture,
-    });
 
-    cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+    // const meTexture = new THREE.TextureLoader().load(me);
+    // const cubeMaterial = new THREE.MeshStandardMaterial({
+    //     map: meTexture,
+    // });
 
-    const sethTexture = new THREE.TextureLoader().load(seth);
-    const cubeMaterial2 = new THREE.MeshStandardMaterial({
-        map: sethTexture,
-    });
-    cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial2);
+    // cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 
-    const dreamStreaTexture = new THREE.TextureLoader().load(dreamStream);
-    const cubeMaterial3 = new THREE.MeshStandardMaterial({
-        map: dreamStreaTexture,
-    });
-    cube3 = new THREE.Mesh(cubeGeometry, cubeMaterial3);
+    // const sethTexture = new THREE.TextureLoader().load(seth);
+    // const cubeMaterial2 = new THREE.MeshStandardMaterial({
+    //     map: sethTexture,
+    // });
+    // cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial2);
+
+    // const dreamStreamTexture = new THREE.TextureLoader().load(dreamStream);
+    // const cubeMaterial3 = new THREE.MeshStandardMaterial({
+    //     map: dreamStreamTexture,
+    // });
+    // cube3 = new THREE.Mesh(cubeGeometry, cubeMaterial3);
+
+    cube = new THREE.Mesh(cubeGeometry, new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true}));
+    cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true}));
+    cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true}));
+
 }
 
 export { torus, moon, cube, cube2, cube3, addStar };
