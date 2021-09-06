@@ -53,7 +53,7 @@ const Main = () => {
             </article>
 
             <article className="light">
-                <h3><a href="https://github.com/sashinshin/workout-app" target="_blank">Workout tracker</a></h3>
+                <h3><a href="http://workout-app-hackday.herokuapp.com/" target="_blank">Workout tracker</a></h3>
                 <p>
                     Workout tracker.
                 </p>
