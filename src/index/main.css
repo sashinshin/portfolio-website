@@ -12,7 +12,15 @@ canvas {
     font-style: normal;
 }
   
-  
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
 main {
     width: 100vw;
     color: white;

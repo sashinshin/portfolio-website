@@ -3,6 +3,11 @@ import './main.css';
 import App from './threejs/App';
 
 const Main = () => {
+    const about = () => {
+        console.log("hello");
+        document.getElementById('about').scrollTo(0);
+    }
+
     return (
         <>
         <title>
@@ -10,6 +15,11 @@ const Main = () => {
         </title>
         <App />
         <main>
+            <nav> 
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact me</a>
+            </nav>
 
             <header>
                 <h1>Sasha Luhr</h1>
@@ -17,7 +27,7 @@ const Main = () => {
 
             <h1 className="title">About</h1>
 
-            <article class="left">
+            <article class="left" id="about">
                 <h2> Who am I?</h2>
 
                 <h3>Start</h3>
@@ -35,7 +45,7 @@ const Main = () => {
 
             </article>
 
-            <h1 className="title">Projects</h1>
+            <h1 className="title" id="projects">Projects</h1>
 
             <article>
                 <h3><a href="https://dream-stream.netlify.app/" target="_blank">DreamStream</a></h3>
@@ -59,7 +69,7 @@ const Main = () => {
                 </p>
             </article>
 
-            <h1 className="title">Contact me</h1>
+            <h1 className="title" id="contact">Contact me</h1>
 
 
         </main>
