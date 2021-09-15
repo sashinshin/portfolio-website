@@ -1,6 +1,8 @@
 import React from 'react';
 import './main.css';
 import App from './threejs/App';
+import githubLogo from './images/github-logo.png'
+import linkedinLogo from './images/linkedin-logo.png'
 
 const Main = () => {
     const about = () => {
@@ -16,9 +18,26 @@ const Main = () => {
         <App />
         <main>
             <nav> 
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact me</a>
+                <ul className="nav">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact me</a>
+                    </li>
+                </ul>
+
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/sashaluhr/" target="_blank">
+                        <img src={linkedinLogo} width="40"/>
+                    </a>
+                    <a href="https://github.com/sashinshin" target="_blank">
+                        <img src={githubLogo} width="40"/>
+                    </a>
+                </div>
             </nav>
 
             <header>
@@ -30,47 +49,45 @@ const Main = () => {
             <article class="left" id="about">
                 <h2> Who am I?</h2>
 
-                <h3>Start</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                <h3>Mid</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                <h3>End</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <p>
+                    My name is Sasha Luhr. I'm a driven and creative developer with a passion for arts and design as well as technology and maths. 
+                    I'm outgoing and social, and always looking for new challenges!
+                </p>
 
             </article>
 
-            <h1 className="title" id="projects">Projects</h1>
+            <h1 className="title" id="projects">Portfolio</h1>
 
-            <article>
+            <article className="light left">
                 <h3><a href="https://dream-stream.netlify.app/" target="_blank">DreamStream</a></h3>
                 <p>
                     DreamStream is an image sharing social media website created by me, Max Anderberg, Amund Ring and Konstantinos Dimtrakopoulus. It has all the features you would want including making posts, liking them, commenting and more!
-                    The app was created using GatsbyJS and the JAM stack.
-                </p>
-            </article>
-
-            <article className="light left">
-                <h3><a href="todo" target="_blank">Todo list</a></h3>
-                <p>
-                    A todo list created in ReactJS. 
+                    The app was created using GatsbyJS and the JAM stack. It is hosted on Netlify and uses a CI/CD pipeline. The backend is completely serverless, and instead relies on Netlify's serverless functions that, with the help of GraphQL, connect it
+                    to FaunaDB.
                 </p>
             </article>
 
             <article className="light">
                 <h3><a href="http://workout-app-hackday.herokuapp.com/" target="_blank">Workout tracker</a></h3>
                 <p>
-                    Workout tracker.
+                    The workout tracker was made in one day as a hackday project. It lets you create exercises that you assemble into a workout complete with customizable reps, sets and weight. Your completed workouts are saved along with time and date.
+                    The workout tracker is created using a React frontend and an Express backend.
+                </p>
+            </article>
+
+            <article className="light left">
+                <h3><a href="todo" target="_blank">Todo list</a></h3>
+                <p>
+                    My first React application! A todo list where you can add, mark and remove items.
                 </p>
             </article>
 
             <h1 className="title" id="contact">Contact me</h1>
+                <footer>
+                    <p>
 
+                    </p>
+                </footer>
 
         </main>
         </>
