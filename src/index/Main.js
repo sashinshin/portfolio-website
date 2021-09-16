@@ -16,7 +16,7 @@ const Main = () => {
             Sasha Luhr
         </title>
         <App />
-        <main>
+        <main className="main-content">
             <nav> 
                 <ul className="nav">
                     <li>
@@ -40,13 +40,13 @@ const Main = () => {
                 </div>
             </nav>
 
-            <header>
+            <header className="name">
                 <h1>Sasha Luhr</h1>
             </header>
 
-            <h1 className="title">About</h1>
+            <h1 className="title" id="about">About</h1>
 
-            <article class="left" id="about">
+            <article class="left">
                 <h2> Who am I?</h2>
 
                 <p>
@@ -83,10 +83,22 @@ const Main = () => {
             </article>
 
             <h1 className="title" id="contact">Contact me</h1>
-                <footer>
-                    <p>
+                <footer className="contact">
+                    <ul className="contact__list"> 
+                        <li>
+                            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="40" />
+                                sasha.luhr@gmail.com
+                        </li>
+                        <li>
+                            <img src="http://cdn.onlinewebfonts.com/svg/img_503524.png" width="40" />
+                                +46 76 56 801 04
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ei-location.svg/2048px-Ei-location.svg.png" width="45" />
+                                Stockholm
+                        </li>
+                    </ul>
 
-                    </p>
                 </footer>
 
         </main>

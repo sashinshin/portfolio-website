@@ -93,12 +93,19 @@ const App = () => {
 
     // Orbit control
     // const controls = new OrbitControls(camera, renderer.domElement);
+    const rot1 = {x : Math.random() * (0.01-0.001) + 0.001, y: Math.random() * (0.01-0.001) + 0.001, z: Math.random() * (0.01-0.001) + 0.001};
+    const rot2 = {x : Math.random() * (0.01-0.001) + 0.001, y: Math.random() * (0.01-0.001) + 0.001, z: Math.random() * (0.01-0.001) + 0.001};
+    const rot3 = {x : Math.random() * (0.01-0.001) + 0.001, y: Math.random() * (0.01-0.001) + 0.001, z: Math.random() * (0.01-0.001) + 0.001};
 
-    const slowRotation = (mesh) => {
-      mesh.rotation.x += 0.005;
-      mesh.rotation.y += 0.001;
-      mesh.rotation.z += 0.005;
+    const slowRotation = (mesh, obj) => {
+      // mesh.rotation.x += 0.005;
+      // mesh.rotation.y += 0.001;
+      // mesh.rotation.z += 0.005;
+      mesh.rotation.x += obj.x;
+      mesh.rotation.y += obj.y;
+      mesh.rotation.z += obj.z;
     }
+
 
     // Update scene
     const animate = () => {
@@ -112,9 +119,9 @@ const App = () => {
       // cube.rotation.x += 0.01;
       // cube.rotation.y += 0.001;
       // cube.rotation.z += 0.005;
-      slowRotation(cube);
-      slowRotation(cube2);
-      slowRotation(cube3);
+      slowRotation(cube, rot1);
+      slowRotation(cube2, rot2);
+      slowRotation(cube3, rot3);
 
       moon.rotation.x += 0.005;
 
