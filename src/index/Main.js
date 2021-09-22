@@ -5,10 +5,6 @@ import githubLogo from './images/github-logo.png'
 import linkedinLogo from './images/linkedin-logo.png'
 
 const Main = () => {
-    const about = () => {
-        console.log("hello");
-        document.getElementById('about').scrollTo(0);
-    }
 
     return (
         <>
