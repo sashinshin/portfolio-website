@@ -36,7 +36,7 @@ body {
 }
 
 .spacer {
-    aspect-ratio: 900/600;
+    aspect-ratio: 960/300;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,5 +44,13 @@ body {
 }
 
 .layer1 {
-    background-image: url('./svg/layered-waves-haikei.svg');
+    background-image: url('./svg/layer1.svg');
+}
+
+.layer2 {
+    background-image: url('./svg/layer2.svg');
+}
+
+.separator {
+    background-image: url('./svg/separator.svg');
 }

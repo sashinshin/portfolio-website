@@ -5,7 +5,7 @@ import linkedinLogo from './images/linkedin-logo.png';
 
 import blob from './svg/blob1.svg'
 
-const Main = () => {
+const Contact = () => {
 
     return (
         <>
@@ -61,4 +61,4 @@ const Main = () => {
     )
 };
 
-export default Main;
+export default Contact;
