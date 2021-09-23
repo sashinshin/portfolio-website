@@ -1,7 +1,8 @@
 import React from 'react';
 import './main.css';
-import githubLogo from './images/github-logo.png'
-import linkedinLogo from './images/linkedin-logo.png'
+import githubLogo from './images/github-logo.png';
+import linkedinLogo from './images/linkedin-logo.png';
+import wave1 from './svg/layered-waves-haikei.svg';
 
 const Main = () => {
 
@@ -12,36 +13,14 @@ const Main = () => {
         </title>
         <main className="main-content">
 
-            {/* navbar */}
-            <nav> 
-                <ul className="nav">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#projects">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact me</a>
-                    </li>
-                </ul>
-
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/sashaluhr/" target="_blank">
-                        <img src={linkedinLogo} width="40"/>
-                    </a>
-                    <a href="https://github.com/sashinshin" target="_blank">
-                        <img src={githubLogo} width="40"/>
-                    </a>
-                </div>
-            </nav>
-
-            <header className="section c1">
+            <header className="section">
                 <h1>Sasha Luhr</h1>
+                <p>Fullstack developer</p>
             </header>
 
+            <div className="spacer layer1" /> 
 
-            <article className="section c2">
+            <article className="section light">
                 <h2> Who am I?</h2>
 
                 <p>
@@ -49,56 +28,12 @@ const Main = () => {
                     I'm outgoing and social, and always looking for new challenges!
                 </p>
 
-            <div className="curve" /> 
             </article>
 
 
-            <h1 className="section c3" id="projects">Portfolio</h1>
-
-            <article className="section c4">
-
-                <h3><a href="https://dream-stream.netlify.app/" target="_blank">DreamStream</a></h3>
-                <p>
-                    DreamStream is an image sharing social media website created by me, Max Anderberg, Amund Ring and Konstantinos Dimtrakopoulus. It has all the features you would want including making posts, liking them, commenting and more!
-                    The app was created using GatsbyJS and the JAM stack. It is hosted on Netlify and uses a CI/CD pipeline. The backend is completely serverless, and instead relies on Netlify's serverless functions that, with the help of GraphQL, connect it
-                    to FaunaDB.
-                </p>
-            </article>
-
-            <article className="section c2">
-                <h3><a href="http://workout-app-hackday.herokuapp.com/" target="_blank">Workout tracker</a></h3>
-                <p>
-                    The workout tracker was made in one day as a hackday project. It lets you create exercises that you assemble into a workout complete with customizable reps, sets and weight. Your completed workouts are saved along with time and date.
-                    The workout tracker is created using a React frontend and an Express backend.
-                </p>
-            </article>
-
-            <article className="section c2">
-                <h3><a href="todo" target="_blank">Todo list</a></h3>
-                <p>
-                    My first React application! A todo list where you can add, mark and remove items.
-                </p>
-            </article>
-
-            <footer className="section c3">
-                <h1 className="title" id="contact">Contact me</h1>
-                <ul className="contact__list"> 
-                    <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="40" />
-                            sasha.luhr@gmail.com
-                    </li>
-                    <li>
-                        <img src="http://cdn.onlinewebfonts.com/svg/img_503524.png" width="40" />
-                            +46 76 56 801 04
-                    </li>
-                    <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ei-location.svg/2048px-Ei-location.svg.png" width="45" />
-                            Stockholm
-                    </li>
-                </ul>
-
-            </footer>
-
+            <section className="section">
+                <h2>Tech stack</h2>
+            </section>
         </main>
         </>
     )

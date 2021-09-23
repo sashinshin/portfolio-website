@@ -1,3 +1,14 @@
+:root {
+    --color-1: #001220;
+    --color-2: #3B185F;
+    --color-3: #A12568;
+    --color-4: #A12568;
+
+    --bg: #001220;
+    --wave: #ee6c4d;
+    --highlight: #3d5a80;
+}
+
 * {
     margin: 0;
 }
@@ -6,30 +17,7 @@ body {
     font-family: sans-serif;
     color: white;
     overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-:root {
-    --color-1: #2A0944;
-    --color-2: #3B185F;
-    --color-3: #A12568;
-    --color-4: #FEC260;
-}
-
-.c1 {
-    background: var(--color-1);
-}
-.c2 {
-    background: var(--color-2);
-}
-.c3 {
-    background: var(--color-3);
-}
-.c4 {
-    background: var(--color-4);
+    
 }
 
 .section {
@@ -39,50 +27,22 @@ html {
     align-items: center;
     min-height: 400px;
     padding: 100px 20vw;
+    background: var(--bg);
+
 }
 
-.curve {
-    position: absolute;
-    height: 225px;
+.light {
+    background: var(--highlight);
+}
+
+.spacer {
+    aspect-ratio: 900/600;
     width: 100%;
-    bottom: 0%;
-   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.curve::before {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    background-color: var(--color-3);
-    transform: translate(85%, 60%);
-}
-  
-.curve::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    background-color: var(--color-2);
-    transform: translate(-4%, 40%);
-    z-index: 1;
-}
-  
-footer {
-    padding: 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-}
-
-.contact__list {
-    list-style: none;
-}
-
-.contact__list img {
-    margin-right: 10px;
-    margin-top: 10px;
+.layer1 {
+    background-image: url('./svg/layered-waves-haikei.svg');
 }
