@@ -3,7 +3,10 @@ import Contact from '../index/Contact';
 
 const ContactPage = () => {
   return (
+    <>
+    <title>Sasha Luhr</title>
     <Contact />
+    </>
   )
 }
 

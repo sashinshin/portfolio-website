@@ -1,5 +1,6 @@
 import React from 'react';
 import './main.css';
+import Navbar from './navbar';
 import githubLogo from './images/github-logo.png';
 import linkedinLogo from './images/linkedin-logo.png';
 
@@ -9,11 +10,8 @@ const Main = () => {
 
     return (
         <>
-        <title>
-            Sasha Luhr
-        </title>
+        <Navbar />
         <main className="main-content">
-
             <header className="section">
                 <h1>Sasha Luhr</h1>
                 <p>Fullstack developer</p>

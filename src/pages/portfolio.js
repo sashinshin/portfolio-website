@@ -3,7 +3,9 @@ import Portfolio from '../index/Portfolio';
 
 const PortfolioPage = () => {
   return (
+    <>
     <Portfolio />
+    </>
   )
 }
 
