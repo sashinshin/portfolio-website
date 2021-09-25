@@ -11,8 +11,6 @@
 body {
     font-family: sans-serif;
     color: white;
-    overflow-x: hidden;
-    
 }
 
 .section {
@@ -50,18 +48,44 @@ body {
     background-image: url('./svg/separator.svg');
 }
 
-nav {
+.navbar {
+
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    background-image: url('./svg/nav2.svg');
 
-    flex-wrap: wrap;
-    aspect-ratio: 960/100;
+    background-image: url('./svg/nav3.svg');
+    aspect-ratio: 960/150;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
+    width: 100%;
 
+}
+
+.navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    color: white;
+}
+
+.navbar a .selected {
+    color: var(--highlight);
+}
+
+.navbar a:hover {
+    color: var(--bg);
+}
+
+@media (min-width: 40em) {
+    .navbar {
+        background-image: url('./svg/nav2.svg');
+        aspect-ratio: 960/100;
+    }
+    .navbar div {
+        padding-bottom: 2em;
+    }
 }

@@ -29,9 +29,9 @@ const Main = () => {
 
             </article>
 
-            <div className="spacer layer2" /> 
+            {/* <div className="spacer layer2" />  */}
 
-            <section className="section">
+            {/* <section className="section">
                 <h2>Tech stack</h2>
             </section>
 
@@ -52,7 +52,7 @@ const Main = () => {
                         <path id="blob2" d="M57.7 -76.9C78.6 -64.2 102.1 -52.5 110.9 -34C119.8 -15.5 114.1 9.9 104.1 31.7C94 53.4 79.6 71.6 61.6 83.9C43.5 96.2 21.7 102.6 -2.5 106.1C-26.8 109.6 -53.7 110.2 -75.9 99.3C-98.1 88.3 -115.6 65.8 -120.1 41.5C-124.6 17.2 -116 -8.9 -108.5 -36.3C-101 -63.7 -94.6 -92.5 -76.7 -106.2C-58.8 -119.9 -29.4 -118.5 -5.5 -110.9C18.4 -103.3 36.7 -89.6 57.7 -76.9" fill="#001220"></path></g>
                 </svg>
                 <p>blob</p>
-            </article>
+            </article> */}
 
         </main>
         </>
