@@ -1,9 +1,4 @@
 :root {
-    --color-1: #001220;
-    --color-2: #3B185F;
-    --color-3: #A12568;
-    --color-4: #A12568;
-
     --bg: #001220;
     --wave: #ee6c4d;
     --highlight: #3d5a80;
@@ -56,16 +51,17 @@ body {
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-image: url('./svg/nav2.svg');
+
     flex-wrap: wrap;
-    background-color: lightgray;
-    width: 100%;
-    height: 70px;
+    aspect-ratio: 960/100;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     z-index: 1;
+
 }

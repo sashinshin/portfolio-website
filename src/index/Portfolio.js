@@ -1,6 +1,7 @@
 import React from 'react';
 import './main.css';
 import './portfolio.css';
+import Navbar from './navbar';
 import githubLogo from './images/github-logo.png';
 import linkedinLogo from './images/linkedin-logo.png';
 import dreamStream from './images/dream-stream.png';
@@ -14,9 +15,7 @@ const Portfolio = () => {
 
     return (
         <>
-        <title>
-            Sasha Luhr
-        </title>
+        <Navbar/>
         <main className="main-content">
 
             <article className="section project">
