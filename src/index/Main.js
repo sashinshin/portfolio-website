@@ -1,6 +1,6 @@
 import React from 'react';
 import './main.css';
-import Navbar from './navbar';
+import Navbar from './Navbar.js';
 import githubLogo from './images/github-logo.png';
 import linkedinLogo from './images/linkedin-logo.png';
 
